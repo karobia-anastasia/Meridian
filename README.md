@@ -1,10 +1,10 @@
-# Meridian Business Systems
+# Meridian Labs
 
-Marketing website for a business portfolio of digital products and services. Meridian Business Systems is a suggested working name; confirm company-name, trademark and domain availability before launch.
+Marketing website for a business portfolio of digital products and services. Meridian Labs is a suggested working name; confirm company-name, trademark and domain availability before launch.
 
 ## Product pages
 
-- Gatewise smart access: `products/gatewise.html`
+- Portico smart access: `products/portico.html`
 - POS: `products/pos.html`
 - E-commerce: `products/ecommerce.html`
 - Visitor registration: `products/visitors.html`
