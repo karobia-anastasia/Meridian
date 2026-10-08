@@ -1,0 +1,38 @@
+# Meridian Business Systems
+
+Marketing website for a business portfolio of digital products and services. Meridian Business Systems is a suggested working name; confirm company-name, trademark and domain availability before launch.
+
+## Product pages
+
+- Gatewise smart access: `products/gatewise.html`
+- POS: `products/pos.html`
+- E-commerce: `products/ecommerce.html`
+- Visitor registration: `products/visitors.html`
+- Booking and scheduling: `products/booking.html`
+- Building management: `products/building.html`
+
+The homepage is a product snapshot linking to each detail page. Each product page describes benefits and use cases without presenting a simulated product interface.
+
+## Services
+
+- Consultancy
+- Custom product development
+- Implementation, onboarding and support
+
+Demo links open WhatsApp with a product-specific message to `0710 708 505`. Call links use `0732 039 599`. Visitors review and send the WhatsApp message themselves.
+
+## Run locally
+
+This is a plain HTML, CSS and JavaScript site with no build step. Run the included server:
+
+```bash
+node server.js
+```
+
+Then open http://localhost:3000.
+
+## Before launch
+
+- Confirm the working business name and contact numbers.
+- Replace sample photography with approved business imagery if needed.
+- Google Fonts and Unsplash photography are loaded remotely.
