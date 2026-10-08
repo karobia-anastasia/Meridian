@@ -78,12 +78,42 @@ solutionTabs.forEach((tab, index) => {
 contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();
   const data = new FormData(contactForm);
-  const message = [
-    `Hello, I would like to book a demo for ${data.get('product')}.`,
-    `Name: ${data.get('name')}`,
-    `Work email: ${data.get('email')}`
-  ].join('\n');
-  const whatsappUrl = `https://wa.me/254710708505?text=${encodeURIComponent(message)}`;
-  contactFeedback.textContent = 'WhatsApp will open with your request details ready to send.';
+  const interest = data.get('interest');
+  const group = contactForm.querySelector('#contact-interest').selectedOptions[0].parentElement.label;
+  const request = group === 'Products' ? `I'd like to book a demo of ${interest}.`
+    : group === 'Services' ? `I'd like to discuss ${interest}.`
+    : `I'd like advice on which product or service fits my business.`;
+  const message = [`Hello, ${request}`, `Name: ${data.get('name')}`, `Phone: ${data.get('phone')}`];
+  if (data.get('email')) message.push(`Email: ${data.get('email')}`);
+  if (data.get('business')) message.push(`Business: ${data.get('business')}`);
+  const whatsappUrl = `https://wa.me/254757622352?text=${encodeURIComponent(message.join('\n'))}`;
+  contactFeedback.textContent = 'WhatsApp will open with your request ready to send.';
   window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+});
+
+// Light deterrent against casual copying and inspecting. Form fields and contact details stay usable.
+const allowCopy = (target) => target instanceof Element && target.closest('input, select, textarea, .contact-actions, .phone-link, .footer-inner a[href^="tel:"]');
+
+document.addEventListener('contextmenu', (event) => {
+  if (!allowCopy(event.target)) event.preventDefault();
+});
+
+['copy', 'cut'].forEach((type) => {
+  document.addEventListener(type, (event) => {
+    const anchor = window.getSelection()?.anchorNode;
+    const selected = anchor?.nodeType === Node.TEXT_NODE ? anchor.parentElement : anchor;
+    if (!allowCopy(event.target) && !allowCopy(selected)) event.preventDefault();
+  });
+});
+
+document.addEventListener('dragstart', (event) => {
+  if (!allowCopy(event.target)) event.preventDefault();
+});
+
+document.addEventListener('keydown', (event) => {
+  const key = event.key.toLowerCase();
+  const mod = event.ctrlKey || event.metaKey;
+  const devtools = event.key === 'F12' || (mod && event.shiftKey && ['i', 'j', 'c'].includes(key)) || (event.metaKey && event.altKey && ['i', 'j', 'c', 'u'].includes(key));
+  const source = mod && ['u', 's'].includes(key);
+  if (devtools || source) event.preventDefault();
 });

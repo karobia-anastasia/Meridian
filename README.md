@@ -1,13 +1,13 @@
-# Meridian Business Systems
+# Meridian Labs
 
-Marketing website for a business portfolio of digital products and services. Meridian Business Systems is a suggested working name; confirm company-name, trademark and domain availability before launch.
+Marketing website for a business portfolio of digital products and services. Meridian Labs is a suggested working name; confirm company-name, trademark and domain availability before launch.
 
 ## Product pages
 
 - Gatewise smart access: `products/gatewise.html`
 - POS: `products/pos.html`
 - E-commerce: `products/ecommerce.html`
-- Visitor registration: `products/visitors.html`
+- Fleet management: `products/fleet.html`
 - Booking and scheduling: `products/booking.html`
 - Building management: `products/building.html`
 
@@ -21,7 +21,7 @@ The homepage is a product snapshot linking to each detail page. Each product pag
 - Custom product development
 - Implementation, onboarding and support
 
-Demo links open WhatsApp with a product-specific message to `0710 708 505`. Call links use `0732 039 599`. Visitors review and send the WhatsApp message themselves.
+Calls and WhatsApp demo links both use `0757 622 352`. Visitors review and send the WhatsApp message themselves.
 
 ## Run locally
 

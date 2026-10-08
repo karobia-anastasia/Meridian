@@ -14,3 +14,24 @@
 
 .phone-link { margin-top: 10px; }
 .whatsapp-link:hover, .phone-link:hover { color: #a74605; }
+.contact-actions { display: grid; justify-items: start; align-content: start; gap: 5px; }
+.contact-actions .button-dark { width: auto; }
+.contact-actions p { margin: 8px 0 0; color: #594a21; font-size: 11px; }
+.contact-actions .phone-link { margin-top: 9px; }
+.contact-actions .contact-form { width: 100%; }
+.contact-form .optional { color: #7a6a3f; font-weight: 500; }
+.contact-form select { appearance: auto; }
+
+.footer-inner .brand { white-space: nowrap; }
+.contact-form .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; }
+.contact-form .form-field { min-width: 0; }
+@media (max-width: 620px) { .contact-form .form-row { grid-template-columns: 1fr; } }
+@media (max-width: 620px) { .contact-actions .button-dark { width: 100%; } }
+
+.brand { padding: 8px 14px 8px 8px; border: 2px solid var(--navy); line-height: 1; }
+.footer-inner .brand { width: fit-content; border-color: rgba(255,255,255,.7); }
+@media (max-width: 620px) { .brand { padding: 6px 11px 6px 6px; font-size: 18px; } }
+
+body { -webkit-user-select: none; user-select: none; }
+input, select, textarea, .contact-actions, .phone-link, .footer-inner a[href^="tel:"] { -webkit-user-select: text; user-select: text; }
+img { -webkit-user-drag: none; }
