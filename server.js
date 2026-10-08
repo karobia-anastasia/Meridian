@@ -14,11 +14,14 @@ const MIME = {
   '.jpeg': 'image/jpeg',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
-  '.webp': 'image/webp'
+  '.webp': 'image/webp',
+  '.txt': 'text/plain; charset=utf-8',
+  '.xml': 'application/xml; charset=utf-8'
 };
 // Only these folders (plus top-level .html pages) are public. Everything else, including
 // server.js, README.md, .git and dotfiles, is never served.
 const PUBLIC_DIRS = ['css', 'js', 'products', 'assets'];
+const PUBLIC_ROOT_FILES = ['robots.txt', 'sitemap.xml'];
 
 const SECURITY_HEADERS = {
   'Content-Security-Policy': [
@@ -61,7 +64,7 @@ const resolvePublicFile = (url) => {
 
   const parts = path.relative(ROOT, filePath).split(path.sep);
   if (parts.some((part) => part.startsWith('.'))) return null;
-  const isTopLevelPage = parts.length === 1 && path.extname(parts[0]) === '.html';
+  const isTopLevelPage = parts.length === 1 && (path.extname(parts[0]) === '.html' || PUBLIC_ROOT_FILES.includes(parts[0]));
   if (!isTopLevelPage && !PUBLIC_DIRS.includes(parts[0])) return null;
   if (!MIME[path.extname(filePath).toLowerCase()]) return null;
   return filePath;

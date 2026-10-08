@@ -86,7 +86,7 @@ contactForm?.addEventListener('submit', (event) => {
   const message = [`Hello, ${request}`, `Name: ${data.get('name')}`, `Phone: ${data.get('phone')}`];
   if (data.get('email')) message.push(`Email: ${data.get('email')}`);
   if (data.get('business')) message.push(`Business: ${data.get('business')}`);
-  const whatsappUrl = `https://wa.me/254710708505?text=${encodeURIComponent(message.join('\n'))}`;
+  const whatsappUrl = `https://wa.me/254757622352?text=${encodeURIComponent(message.join('\n'))}`;
   contactFeedback.textContent = 'WhatsApp will open with your request ready to send.';
   window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 });
