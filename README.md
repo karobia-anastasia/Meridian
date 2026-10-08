@@ -11,6 +11,8 @@ Marketing website for a business portfolio of digital products and services. Mer
 - Booking and scheduling: `products/booking.html`
 - Building management: `products/building.html`
 
+The homepage includes About, Services, Industries and Contact sections; only products have their own pages.
+
 The homepage is a product snapshot linking to each detail page. Each product page describes benefits and use cases without presenting a simulated product interface.
 
 ## Services
