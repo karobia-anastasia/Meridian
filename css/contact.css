@@ -28,9 +28,9 @@
 @media (max-width: 620px) { .contact-form .form-row { grid-template-columns: 1fr; } }
 @media (max-width: 620px) { .contact-actions .button-dark { width: 100%; } }
 
-.brand { padding: 8px 14px 8px 8px; border: 2px solid var(--navy); line-height: 1; }
-.footer-inner .brand { width: fit-content; border-color: rgba(255,255,255,.7); }
-@media (max-width: 620px) { .brand { padding: 6px 11px 6px 6px; font-size: 18px; } }
+.brand { padding: 0; border: 0; line-height: 1; }
+.footer-inner .brand { width: fit-content; border-color: transparent; }
+@media (max-width: 620px) { .brand { padding: 0; font-size: 18px; } }
 
 body { -webkit-user-select: none; user-select: none; }
 input, select, textarea, .contact-actions, .phone-link, .footer-inner a[href^="tel:"] { -webkit-user-select: text; user-select: text; }

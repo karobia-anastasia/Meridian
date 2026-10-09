@@ -4,12 +4,12 @@ Marketing website for a business portfolio of digital products and services. Mer
 
 ## Product pages
 
-- Gatewise smart access: `products/gatewise.html`
-- POS: `products/pos.html`
-- E-commerce: `products/ecommerce.html`
-- Fleet management: `products/fleet.html`
-- Booking and scheduling: `products/booking.html`
-- Building management: `products/building.html`
+- Access Control: `products/mdaccesscontrol.html`
+- POS: `products/mdpos.html`
+- E-commerce: `products/mdecommerce.html`
+- Fleet management: `products/mdfleet.html`
+- Booking and scheduling: `products/mdbooking.html`
+- Building management: `products/mdbuilding.html`
 
 The homepage includes About, Services, Industries and Contact sections; only products have their own pages.
 
